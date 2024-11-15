@@ -121,9 +121,9 @@ label { /*cache le label par default tant qu'on est sur format pc */
  }
  .image{/*disposer plusieurs images dans un conteneur en les organisant de manière fluide*/
     display: flex;
-    flex-wrap: wrap; /* Allows images to move to the next line */
-    gap: 20px; /* Remove space between images */
-    justify-content: center; /* Center the images */
+    flex-wrap: wrap; 
+    gap: 20px; 
+    justify-content: center; 
 }
   
 }
