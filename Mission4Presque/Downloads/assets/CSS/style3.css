@@ -1,0 +1,313 @@
+/* Réinitialise marges (margin) et espacements (padding)*/
+* {/*pour uniformiser le rendu entre navigateurs */
+    margin: 0;/* 1px 3px; /* Supprime l'espace autour des éléments */
+    padding: 0; /* Supprime l'espace intérieur des éléments */
+
+   font-family: Baskerville, serif;
+}
+
+/* Corps de la page : couleur de texte, fond et espacement*/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Baskerville, serif;
+    line-height: 1.6; /* espacement vertical entre les lignes*/
+    color: black; /* Définit la couleur du texte principale */
+    background-color: #ece5dd;
+}
+
+/* En-tête centré avec fond coloré et texte blanc */
+.main-header {
+    /* text-align: center; /* Centre le texte horizontalement */ 
+    background-color: rgb(138, 22, 57); /* Fond rouge paris pour l'en-tête */
+    padding: 10px; /* Espace intérieur autour du contenu */
+    color: #ece5dd; /* Texte en blanc */
+}
+
+/* Titre principal en grand format */
+.main-title {
+	text-decoration: underline; /* Adds an underline */
+    text-decoration-color: #333; /* Sets the underline color to dark (you can use any dark color like #000 for black or #333 for dark gray) */
+    font-size: 2em; /* Taille du texte doublée */
+    margin-bottom: 10px; /* Espace sous le titre */
+	margin-left: 10%; /* Décalage de 20px à gauche */
+
+}
+.sous-title{
+	margin-left: 10%; /* Décalage de 20px à gauche */
+}
+
+label {
+ display: none;
+}
+
+.menu {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ gap: 30px;
+ background-color:#ece5dd;
+}
+#toggle{
+	display: none;
+}
+.menu a {
+ width: 10%;
+ height: 40px;
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ text-decoration: none;
+ color: black;
+ font-weight: bold;
+}
+.menu a:hover {
+ background-color:rgb(138, 22, 57);
+ color: black;
+ text-decoration: underline;
+ border-left: 1.5px solid black; /* Red border on the left */
+ border-right: 1.5px solid black; /* Red border on the right */
+}
+
+@media all and (max-width: 991px) {
+     nav {
+        height: 60px;
+     }
+     .menu {
+        display: none;
+     }
+     .menu a{
+         width: 50%;
+
+
+     }
+     label {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         font-size: 40px;
+         color: black;
+         cursor: pointer;
+     }
+
+     .image-figure {
+        flex: 0 1 100%; /* Sur les petits écrans, chaque image prend 100% de la largeur */
+    }
+    .image img {
+        width: 100%;  /* L'image prend toute la largeur de son conteneur */
+        height: auto; /* La hauteur est ajustée automatiquement pour préserver les proportions */
+    }
+
+     #toggle:checked + .menu {
+         display: flex;
+         flex-direction: column;
+         background-color: rgba(255,255,255,0.20);
+         backdrop-filter:blur(8px);
+         width:100%;
+         height: 100vh;
+     }
+     #toggle:checked + .menu a {
+        padding-bottom: 1em;
+     }
+     .image{
+        display: flex;
+        flex-wrap: wrap; /* Allows images to move to the next line */
+        gap: 20px; /* Remove space between images */
+        justify-content: center; /* Center the images */
+    }
+    .container{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: wrap;
+
+    }
+}
+
+/* ---------------------------------------------------css yazan------------------------------------------------------------------------------- */
+
+#context {
+    border: 1px solid black;
+    padding: 10px 0px 10px 20px;
+    width: 70%;
+    margin-top: 20px;
+    margin-left: 20px;
+    background-color: rgba(0, 0, 0, 0.24);
+    border-radius: 3px 20px 20px 20px;
+    box-shadow: #555555 3px 3px 3px;
+}
+
+@counter-style themes { /* creation d'un compteur de liste à puce */
+    system: fixed;
+    symbols:  🍰☕ 📊📈 🗺️🚜 🏢💼;
+    suffix: " ";
+}
+.indicateurs{
+    margin-top: 20px;
+    /*margin-left: 50px;*/
+}
+.indicateurs > ul > li{
+    list-style-type: themes;
+   margin-left: 50px;
+
+}
+
+.indica {
+    border: 3px solid #a1a0a0;
+    display: flex;
+    flex-wrap: wrap;
+    background-color:rgba(0, 0, 0, 0.24);
+    min-width: 600px;
+    border-radius: 15px;
+    padding-left: 10px;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.5);
+    margin: 3px 10px;
+}
+
+.indica > figure > figcaption  {
+    text-align: center;
+}
+
+.container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+
+figure > ul {
+    list-style-position: inside;
+}
+.bloc{
+   display: block;
+    margin: 5px;
+    margin-left: 10px;
+    border-radius: 3px;
+}
+
+.h2 {
+    text-decoration:  underline;
+}
+
+
+/*--------------------------------------------------css Yazan----------------------------------------------------*/
+
+
+
+
+
+
+.alleztg{
+	margin-bottom: 15px;
+	margin-top: 15px;
+	 border-left: 50px solid  #e5e5e5; /* Bordure fine en gris clair */
+	border-right: 50px solid  #e5e5e5; /* Bordure fine en gris clair */
+}
+/* -------------------------------------------------------------------------------------------------------------------------------------- */
+/* Style des sections ,fond blanc, bordure et coins arrondis*/
+.section {
+
+    padding: 20px; /* pour éloigner le texte des bords */
+    margin-top: 20px; /* Espace au-dessus de chaque section */
+    background-color: #ffffff; /* Fond blanc */
+    border-left: 50px solid  #e5e5e5; /* Bordure fine en gris clair */
+	border-right: 50px solid  #e5e5e5; /* Bordure fine en gris clair */
+    border-radius: 5px; /* Coins légèrement arrondis */
+}
+
+/* Titres de section en grand, marges pour espacement */
+.section-title {
+    font-size: 1.5em; /* Taille du texte augmentée */
+    color: black; /* Couleur du texte en gris foncé */
+    margin-bottom: 10px; /* Espace sous le titre */
+}
+
+.section-text {
+    margin-bottom:  10px; /* espace entre chaque texte */
+}
+
+
+
+
+/* ----------------------------------------------------------pour les ptn de photos--------------------------------------------------------------------------- */
+
+
+.main-section1 {
+    display: flex;
+    flex-wrap: wrap; /* Allows images to move to the next line */
+    gap: 0; /* Remove space between images */
+    justify-content: center; /* Center the images */
+}
+
+.image-figure {
+    flex: 0 1 50%; /* Each image takes 50% of the container width */
+    text-align: center; /* Center the caption under each image */
+}
+
+.section-image {
+    width: 400px; /* Set image width to 400px */
+    height: 300px; /* Set image height to 300px */
+    border-radius: 5px; /* Optional: rounded corners */
+}
+
+
+
+.image-caption {
+    font-size: 0.9em; /* Taille de police légèrement plus petite pour la légende */
+    color: #555; /* Couleur gris clair pour le texte de la légende */
+    margin-top: 5px; /* Espace entre l'image et la légende */
+}
+
+
+
+
+
+
+/* --------------------------------------------tableau--------------------------------------------------------------------------*/
+
+
+
+
+/* Tableau avec bordures pour chaque cellule */
+.info-table {
+    width: 100%; /* Largeur du tableau à 100%  */
+    border-collapse: collapse; /* Fusionne les bordures */
+    margin-top: 15px; /* Espace au-dessus du tableau */
+}
+
+.info-table th, .info-table td {
+    padding: 10px; /* Espace intérieur dans chaque cellule */
+    border: 1px solid #ddd; /* Bordure fine en gris clair */
+    text-align: left; /* Texte aligné à gauche */
+}
+
+/* Fond gris clair pour l'en-tête du tableau */
+.info-table th {
+    background-color: #f2f2f2; /* Couleur de fond pour l'en-tête */
+}
+.nav-link2 {
+	padding: 10px;
+    text-decoration: none; /* Supprime le soulignement lien */
+    color: black; /* Couleur du texte en blanc */
+    font-weight: bold; /* Texte en gras */
+}
+
+.nav-link2:hover {
+	background-color:#333333;
+    color: white; /* Keep the text color black */
+    text-decoration: underline; /* Underline on hover */
+
+    border-left: 1.5px solid black; /* Red border on the left */
+    border-right: 1.5px solid black; /* Red border on the right */
+}
+
+/* ------------------------------------------footer---------------------------------------------------------------------------------------- */
+/* Pied de page centré avec fond sombre */
+.footer {
+    text-align: center; /* Centre le texte */
+    margin-top: 20px; /* Espace au-dessus du pied de page */
+    padding: 15px; /* Espace intérieur */
+    background-color: #333; /* Fond sombre */
+    color: #ffffff; /* Texte en blanc */
+    font-size: 0.9em; /* Taille du texte légèrement réduite */
+}
